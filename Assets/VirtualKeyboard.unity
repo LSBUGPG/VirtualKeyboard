@@ -369,6 +369,9 @@ MonoBehaviour:
       unshifted: ']'
       shifted: '}'
   - keys:
+    - code: 301
+      unshifted: Caps Lock
+      shifted: Caps Lock
     - code: 97
       unshifted: a
       shifted: A

@@ -27,6 +27,8 @@ public class VirtualKeyboard : MonoBehaviour
     public GameObject firstKey;
     public VirtualKey keyPrefab;
     public HorizontalLayoutGroup rowPrefab;
+    bool capsLock = false;
+    bool shift = false;
 
     public Row[] rows;
 
@@ -50,9 +52,41 @@ public class VirtualKeyboard : MonoBehaviour
         }
     }
 
+    public void Return()
+    {
+        gameObject.SetActive(false);
+    }
+
+    void UpdateShift()
+    {
+        BroadcastMessage("Shift", shift);
+    }
+
+    public void ToggleShift()
+    {
+        if (capsLock)
+        {
+            capsLock = false;
+        }
+        shift = !shift;
+        UpdateShift();
+    }
+
+    public void ToggleCapsLock()
+    {
+        capsLock = !capsLock;
+        shift = capsLock;
+        UpdateShift();
+    }
+
     public void Type(VirtualKey key)
     {
         key.Modify(inputField);
+        if (!capsLock && shift)
+        {
+            shift = false;
+            UpdateShift();
+        }
     }
 
     public void Open()

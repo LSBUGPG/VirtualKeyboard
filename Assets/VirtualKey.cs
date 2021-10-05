@@ -13,6 +13,7 @@ public class VirtualKey : MonoBehaviour
     public TextMeshProUGUI keyCap;
 
     VirtualKeyboard keyboard;
+    bool shift = false;
 
     void Start()
     {
@@ -24,12 +25,41 @@ public class VirtualKey : MonoBehaviour
 
     public void OnClick()
     {
-        keyboard.Type(this);
+        switch (code)
+        {
+            case KeyCode.CapsLock:
+                keyboard.ToggleCapsLock();
+                break;
+
+            case KeyCode.Return:
+                keyboard.Return();
+                break;
+
+            case KeyCode.LeftShift:
+            case KeyCode.RightShift:
+                keyboard.ToggleShift();
+                break;
+
+            default:
+                keyboard.Type(this);
+                break;
+        }
     }
 
     public void Modify(TMP_InputField field)
     {
-        field.SetTextWithoutNotify(field.text + unshifted);
+        field.SetTextWithoutNotify(field.text + GetKeyString());
         field.ForceLabelUpdate();
+    }
+
+    string GetKeyString()
+    {
+        return shift ? shifted : unshifted;
+    }
+
+    public void Shift(bool shift)
+    {
+        this.shift = shift;
+        keyCap.text = GetKeyString();
     }
 }
