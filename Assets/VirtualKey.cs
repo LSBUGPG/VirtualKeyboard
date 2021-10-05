@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class VirtualKey : MonoBehaviour
 {
+    RectTransform rectTransform;
     public KeyCode code;
     public string unshifted;
     public string shifted;
@@ -17,6 +18,8 @@ public class VirtualKey : MonoBehaviour
     {
         keyboard = GetComponentInParent<VirtualKeyboard>();
         keyCap.text = unshifted;
+        rectTransform = GetComponent<RectTransform>();
+        rectTransform.sizeDelta += Vector2.right * keyCap.preferredWidth;
     }
 
     public void OnClick()

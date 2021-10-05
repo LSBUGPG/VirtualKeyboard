@@ -326,12 +326,12 @@ MonoBehaviour:
       unshifted: =
       shifted: +
     - code: 8
-      unshifted: <-
-      shifted: <-
+      unshifted: "\u2190"
+      shifted: "\u2190"
   - keys:
     - code: 9
-      unshifted: ->
-      shifted: ->
+      unshifted: "\u2192"
+      shifted: "\u2192"
     - code: 113
       unshifted: q
       shifted: Q
@@ -373,8 +373,8 @@ MonoBehaviour:
       unshifted: a
       shifted: A
     - code: 115
-      unshifted: a
-      shifted: A
+      unshifted: s
+      shifted: S
     - code: 100
       unshifted: d
       shifted: D
@@ -406,12 +406,12 @@ MonoBehaviour:
       unshifted: '#'
       shifted: ~
     - code: 13
-      unshifted: <-
-      shifted: <-
+      unshifted: "\u23CE"
+      shifted: "\u23CE"
   - keys:
     - code: 304
-      unshifted: ^
-      shifted: ^
+      unshifted: "\u21E7"
+      shifted: "\u21E7"
     - code: 92
       unshifted: \
       shifted: '|'
@@ -446,15 +446,12 @@ MonoBehaviour:
       unshifted: /
       shifted: '?'
     - code: 303
-      unshifted: ^
-      shifted: ^
+      unshifted: "\u21E7"
+      shifted: "\u21E7"
   - keys:
     - code: 306
       unshifted: Ctrl
       shifted: Ctrl
-    - code: 311
-      unshifted: Win
-      shifted: Win
     - code: 308
       unshifted: Alt
       shifted: Alt
@@ -464,9 +461,6 @@ MonoBehaviour:
     - code: 307
       unshifted: Alt Gr
       shifted: Alt Gr
-    - code: 312
-      unshifted: Win
-      shifted: Win
     - code: 319
       unshifted: Menu
       shifted: Menu
