@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class VirtualKey : MonoBehaviour
 {
     public KeyCode code;
+    public string unshifted;
+    public string shifted;
+    public TextMeshProUGUI keyCap;
 
     VirtualKeyboard keyboard;
 
     void Start()
     {
         keyboard = GetComponentInParent<VirtualKeyboard>();
+        keyCap.text = unshifted;
     }
 
     public void OnClick()
@@ -21,7 +26,7 @@ public class VirtualKey : MonoBehaviour
 
     public void Modify(TMP_InputField field)
     {
-        field.SetTextWithoutNotify(field.text + code.ToString());
+        field.SetTextWithoutNotify(field.text + unshifted);
         field.ForceLabelUpdate();
     }
 }
