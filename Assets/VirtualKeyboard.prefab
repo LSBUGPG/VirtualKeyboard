@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5712091508535033881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5712091508535033882}
+  - component: {fileID: 5712091508535033956}
+  - component: {fileID: 5712091508535033883}
+  - component: {fileID: 5712091508535033957}
+  m_Layer: 5
+  m_Name: VirtualKeyboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5712091508535033882
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712091508535033881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -112.499985}
+  m_SizeDelta: {x: 800, y: 225}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5712091508535033956
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712091508535033881}
+  m_CullTransparentMesh: 0
+--- !u!114 &5712091508535033883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712091508535033881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5712091508535033957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712091508535033881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3de53147f28f84587132d3c146740f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 0}
+  firstKey: {fileID: 0}
+  keyPrefab: {fileID: 7570589687953899854, guid: b3678a2c26ffd8d4c92c3c4b22448b67,
+    type: 3}
+  rowPrefab: {fileID: -7908695838190923554, guid: 70735835497e9294893d43e9b4d0c66f,
+    type: 3}
+  rows:
+  - keys:
+    - code: 27
+      unshifted: ESC
+      shifted: ESC
+    - code: 49
+      unshifted: 1
+      shifted: '!'
+    - code: 50
+      unshifted: 2
+      shifted: '"'
+    - code: 51
+      unshifted: 3
+      shifted: "\xA3"
+    - code: 52
+      unshifted: 4
+      shifted: $
+    - code: 53
+      unshifted: 5
+      shifted: '%'
+    - code: 54
+      unshifted: 6
+      shifted: ^
+    - code: 55
+      unshifted: 7
+      shifted: '&'
+    - code: 56
+      unshifted: 8
+      shifted: '*'
+    - code: 57
+      unshifted: 9
+      shifted: (
+    - code: 48
+      unshifted: 0
+      shifted: )
+    - code: 45
+      unshifted: '-'
+      shifted: _
+    - code: 61
+      unshifted: =
+      shifted: +
+    - code: 8
+      unshifted: "\u2190"
+      shifted: "\u2190"
+  - keys:
+    - code: 9
+      unshifted: "\u2192"
+      shifted: "\u2192"
+    - code: 113
+      unshifted: q
+      shifted: Q
+    - code: 119
+      unshifted: w
+      shifted: W
+    - code: 101
+      unshifted: e
+      shifted: E
+    - code: 114
+      unshifted: r
+      shifted: R
+    - code: 116
+      unshifted: t
+      shifted: T
+    - code: 121
+      unshifted: y
+      shifted: Y
+    - code: 117
+      unshifted: u
+      shifted: U
+    - code: 105
+      unshifted: i
+      shifted: I
+    - code: 111
+      unshifted: o
+      shifted: O
+    - code: 112
+      unshifted: p
+      shifted: P
+    - code: 91
+      unshifted: '['
+      shifted: '{'
+    - code: 93
+      unshifted: ']'
+      shifted: '}'
+  - keys:
+    - code: 301
+      unshifted: Caps Lock
+      shifted: Caps Lock
+    - code: 97
+      unshifted: a
+      shifted: A
+    - code: 115
+      unshifted: s
+      shifted: S
+    - code: 100
+      unshifted: d
+      shifted: D
+    - code: 102
+      unshifted: f
+      shifted: F
+    - code: 103
+      unshifted: g
+      shifted: G
+    - code: 104
+      unshifted: h
+      shifted: H
+    - code: 106
+      unshifted: j
+      shifted: J
+    - code: 107
+      unshifted: k
+      shifted: K
+    - code: 108
+      unshifted: l
+      shifted: L
+    - code: 59
+      unshifted: ;
+      shifted: ':'
+    - code: 39
+      unshifted: ''''
+      shifted: '@'
+    - code: 35
+      unshifted: '#'
+      shifted: ~
+    - code: 13
+      unshifted: "\u23CE"
+      shifted: "\u23CE"
+  - keys:
+    - code: 304
+      unshifted: "\u21E7"
+      shifted: "\u21E7"
+    - code: 92
+      unshifted: \
+      shifted: '|'
+    - code: 122
+      unshifted: z
+      shifted: Z
+    - code: 120
+      unshifted: x
+      shifted: X
+    - code: 99
+      unshifted: c
+      shifted: C
+    - code: 118
+      unshifted: v
+      shifted: V
+    - code: 98
+      unshifted: b
+      shifted: B
+    - code: 110
+      unshifted: n
+      shifted: N
+    - code: 109
+      unshifted: m
+      shifted: M
+    - code: 44
+      unshifted: ','
+      shifted: <
+    - code: 46
+      unshifted: .
+      shifted: '>'
+    - code: 47
+      unshifted: /
+      shifted: '?'
+    - code: 303
+      unshifted: "\u21E7"
+      shifted: "\u21E7"
+  - keys:
+    - code: 306
+      unshifted: Ctrl
+      shifted: Ctrl
+    - code: 308
+      unshifted: Alt
+      shifted: Alt
+    - code: 32
+      unshifted: ' '
+      shifted: ' '
+    - code: 307
+      unshifted: Alt Gr
+      shifted: Alt Gr
+    - code: 319
+      unshifted: Menu
+      shifted: Menu
+    - code: 305
+      unshifted: Ctrl
+      shifted: Ctrl
